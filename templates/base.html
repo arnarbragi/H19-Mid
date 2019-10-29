@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='main.css') }}">
+</head>
+
+<body>
+    <div class="b">
+    <header>
+      <div>
+        <h1>
+          Bensínstöðvar
+        </h1>
+      </div>
+      <div>
+        <nav class="topnav">
+          <a href="/">Home</a>
+          <a href="https://apis.is/" target="_blank">Apis</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="adal">
+      {% block innihald %}
+
+      {% endblock %}
+    </div>
+    </div>
+    
+    <div class="lagt">
+        <h4>Lægsta Bensín95: {{laegsta[0]}} = {{laegsta[1]}}</h4>
+        <h4>Lægsta Diesel: {{laegsta[2]}} = {{laegsta[3]}}</h4>
+    </div>
+
+    <footer>
+      <p>&copy; 2018 Arnar Bragi Bragason - <a href="https://arnarbragi.github.io" target="blank">arnarbragi.github.io</a></p>
+    </footer>
+</body>
+</html>
